@@ -1,0 +1,62 @@
+{
+	"CALMA": {
+		"speed": 5,
+		"short_desc": "Viento en Calma",
+		"long_desc": "Todo muy tranquilo"
+	},
+	"BRISA": {
+		"speed": 11,
+		"short_desc": "Brisa",
+		"long_desc": "El viento se siente en la cara, se mueven las hojas de los árboles y las veletas comunes"
+	},
+	"VIENTO_LEVE": {
+		"speed": 19,
+		"short_desc": "Viento leve",
+		"long_desc": "Las hojas y las ramas de los arboles se agitan constantemente; las bandersa se extienden al viento"
+	},
+	"VIENTO_MODERADO": {
+		"speed": 28,
+		"short_desc": "Viento moderado",
+		"long_desc": "Se levanta el polvo y vuenlan papeles pequeños; se mueven las ramas pequeñas de los árboles."
+	},
+	"VIENTO_REGULAR": {
+		"speed": 38,
+		"short_desc": "Viento Regural",
+		"long_desc": "Se balancean los árboles pequeños; se forman pequeñas olas en los estanques."
+	},
+	"VIENTO_FUERTE": {
+		"speed": 49,
+		"short_desc": "Viento fuerte",
+		"long_desc": "Se mueven las ramas grandes de los árboles; dificultad para mantener abierto el paraguas."
+	},
+	"VIENTO_MUY_FUERTE": {
+		"speed": 61,
+		"short_desc": "Viento muy fuerte",
+		"long_desc": "Todos los árboles se mueven; dificultad para andar contra el viento."
+	},
+	"TEMPORAL": {
+		"speed": 74,
+		"short_desc": "Temporal",
+		"long_desc": "Se rompen las ramas pequelñas de los árboles; generalmente no se puede andar contra el viento."
+	},
+	"TEMPORAL_FUERTE": {
+		"speed": 88,
+		"short_desc": "Temporal fuerte",
+		"long_desc": "Se producen ligeros desperfectos en los edificios; vuelan las tejas."
+	},
+	"TORMENTA": {
+		"speed": 102,
+		"short_desc": "Tormenta",
+		"long_desc": "Arranca árboles y ocasiona daños de consideración en los edificios."
+	},
+	"TORMENTA_VIOLENTA": {
+		"speed": 117,
+		"short_desc": "Tormenta violenta",
+		"long_desc": "Ocasiona destrozos por doquier."
+	},
+	"HURACAN": {
+		"speed": 118,
+		"short_desc": "Huracán",
+		"long_desc": "Ocasiona destrozos por doquier."
+	}
+}

@@ -1,3 +1,5 @@
 secrets.ini
 .venv
+src/__pycache__
 __pycache__
+documentation.docx
