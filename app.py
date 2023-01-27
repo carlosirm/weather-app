@@ -1,8 +1,7 @@
-from src.line_argument import read_user_cli_args
-from src.api_manager import build_weather_query, get_url_icon
-from src.style import _select_weather_display_params, display_weather_info
-from src.weather import get_weather_json, get_weather_data
-
+from modelo import read_user_cli_args
+from modelo import build_weather_query, get_url_icon
+from modelo import get_weather_json, get_weather_data
+from vista import _select_weather_display_params, display_weather_info
 
 if __name__ == "__main__":
     user_args = read_user_cli_args()
