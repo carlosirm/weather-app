@@ -136,7 +136,6 @@ def get_weather_data (weather_json):
 
     return data_dic
 
-
 def open_wind_class_data(filename:str):
     with open(filename, encoding='utf-8') as f:
         wind_dict = json.load(f)
