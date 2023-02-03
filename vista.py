@@ -71,7 +71,9 @@ def display_weather_info (data_dic:dict, imperial=False):
     print(f"Sensación Termica: ({data_dic['feels_like']}°{'F' if imperial else 'C'})")
     change_color(RESET)
     print(f"{weather_symbol}", end=" ")
-    print(f"{data_dic['wind_info'][0]}  {data_dic['wind_info'][1]}")
+    print(f"{data_dic['wind_speed'][0]}  {data_dic['wind_speed'][1]}")
+
+
 
 
 

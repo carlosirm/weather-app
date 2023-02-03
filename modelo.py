@@ -4,7 +4,7 @@ import argparse
 import json
 import sys
 from datetime import datetime, timedelta, timezone
-
+from tkinter import ttk
 
 
 def read_user_cli_args():
@@ -98,6 +98,7 @@ def get_weather_json(query_url):
 
 
 def get_weather_data (weather_json):
+    """ get only data without mixture or manipulation"""
     
     city = weather_json["name"]
     country = weather_json["sys"]["country"]
@@ -110,8 +111,9 @@ def get_weather_data (weather_json):
     feels_like = weather_json["main"]["feels_like"]
     wind_speed = weather_json["wind"]["speed"]
 
-    wind_json = open_wind_class_data ('classification_wind.json')
-    wind_info = wind_classifier(wind_speed, wind_json)
+    
+    #wind_json = open_wind_class_data ('classification_wind.json')
+    #wind_info = wind_classifier(wind_speed, wind_json)
     
     current_time = datetime.now()
     uct_time = datetime.now(timezone.utc)
@@ -128,13 +130,15 @@ def get_weather_data (weather_json):
                 "weather_icon":weather_icon,
                 "temperature":temperature,
                 "feels_like":feels_like,
-                "wind_info":wind_info,
+                "wind_speed":wind_speed,
                 "current_time":current_time,
                 "current_local_time":current_local_time,
                 "meassure_dt":meassure_dt
                 }
 
     return data_dic
+
+
 
 def open_wind_class_data(filename:str):
     with open(filename, encoding='utf-8') as f:
@@ -182,3 +186,26 @@ def wind_classifier(wind_speed:int, wind_dict:dict):
             wind_short_desc = f"{wind_speed}km/h: {wind_dict['HURACAN']['short_desc']}"
             wind_long_desc = f"{wind_dict['HURACAN']['long_dsc']}"
     return wind_short_desc, wind_long_desc
+
+
+def build_weather_data_set(data_dic):
+    """ Built data set to display on the screen"""
+    wind_json = open_wind_class_data ('classification_wind.json')
+    wind_info = wind_classifier(data_dic["wind_speed"], wind_json)
+    data_dic['wind_speed'] = wind_info
+    return (data_dic)
+
+def get_city_entry():
+    city = city_entry.get()
+    return (city)
+
+def flat_weather_dict (weather:dict):
+    weather_str = str()
+    for key, value in weather.items():
+        weather_str += key + ": " + value + "\t"
+    return (weather_str)
+
+
+def display_on_windows(weather_str):
+    current_weather_label = ttk.Label(text= weather_str)
+    current_weather_label.place(x=62, y= 80)
